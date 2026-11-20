@@ -1,0 +1,18 @@
+# AutoTuneMPC examples
+
+- https://api.autotunempc.com
+- https://autotunempc.com
+- https://autotunempc.com/SKILL.md
+- https://api.autotunempc.com/mcp
+- claude mcp add --transport http autotunempc https://api.autotunempc.com/mcp
+
+Free: POST /v1/validate
+Paid: POST /v1/solve $0.02, POST /v1/autotune $1.50, POST /v1/templates/autotune $2.00
+Pack: $29 for 1000 solves and 4 autotunes. A template autotune spends 2 autotune credits.
+Human door: X-API-Key. Agent door: HTTP 402 plus PAYMENT-SIGNATURE.
+
+Scripts:
+- validate.py
+- differential_drive.py
+- battery_peak_shaving.py
+- root_zone_irrigation.py
