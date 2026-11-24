@@ -6,13 +6,17 @@
 - https://api.autotunempc.com/mcp
 - claude mcp add --transport http autotunempc https://api.autotunempc.com/mcp
 
-Free: POST /v1/validate
+Free: POST /v1/validate, POST /v1/export, POST /v1/sysid. No API key.
+Export targets: casadi_python (default), ros2_node, acados_python. The ICR plant is kinematic only.
+Sysid body: {"samples": [{"t", "u", "y"}, ...]}. Returns A, B, dt, and fit_error.
 Paid: POST /v1/solve $0.02, POST /v1/autotune $1.50, POST /v1/templates/autotune $2.00
 Pack: $29 for 1000 solves and 4 autotunes. A template autotune spends 2 autotune credits.
 Human door: X-API-Key. Agent door: HTTP 402 plus PAYMENT-SIGNATURE.
 
 Scripts:
 - validate.py
+- export_controller.py
+- sysid_example.py
 - differential_drive.py
 - battery_peak_shaving.py
 - root_zone_irrigation.py
